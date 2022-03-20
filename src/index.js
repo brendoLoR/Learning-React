@@ -1,45 +1,20 @@
-function Header(){
-    return (
-    <header>
-        <nav className="navbar">
-            <img src="../src/React.png" width="40px"/>
+import React from "react"
+import ReactDOM from "react-dom"
+import Header from "./Header"
+import Body from "./Body"
+import Footer from "./Footer"
 
-            <ul className="main-menu-navbar">
-                <li>Princing</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
+function Page() {
+    return ( <
+        div className = "body-content" >
+        <
+        Header / >
+        <
+        Body / >
+        <
+        Footer / >
+        <
+        /div>
     )
 }
-function Body(){
-    return (
-        <body>
-            <h1>This is my page, ok?</h1>
-            <ol>
-                <li>my Page</li>
-                <li>my Page</li>
-                <li>my Page</li>
-           </ol>
-        </body>
-    )
-}
-
-function Foorer() {
-    return (
-        <footer>
-            <small>this is my page</small>
-        </footer>
-    )
-}
-function Page(){
-    return (
-        <div>
-        <Header />
-        <Body />
-        <Foorer />
-    </div>
-    )
-}
-ReactDOM.render(<Page />, document.getElementById("root"))
+ReactDOM.render( < Page / > , document.getElementById("root"))
