@@ -1,16 +1,20 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import DevIcons from "./DevIcons"
+import mainPage from "./letters"
 
 export default function Body() {
     return (
         <div>
-
-            <h1>This is my page, ok?</h1>
-            <ol>
-                <li>my Page</li>
-                <li>my Page</li>
-                <li>my Page</li>
-            </ol>
+            <div className="mainRow">
+                <div className="col">
+                    <img src={require('./profile_img.jpg')} alt="" className="profileImage" />
+                </div>
+                <div className="col">
+                    <h4 className="mainPageName">{mainPage.name}</h4>
+                    <p className="mainPageDescription">{mainPage.descripition}</p>
+                </div>
+            </div>
+            <DevIcons />
         </div>
-
     )
 }

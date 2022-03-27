@@ -1,17 +1,23 @@
+:root {
+    --textColor: rgb(219, 239, 241);
+    --backgroundColor: rgb(44, 48, 49);
+    --headerColor: rgb(103, 114, 117);
+}
+
 .root,
 .body-content {
-    background-color: rgb(44, 48, 49);
+    background-color: var(--backgroundColor);
 }
 
 body {
-    color: beige;
-    background-color: rgb(44, 48, 49);
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
     text-decoration-color: beige;
 }
 
 .header {
     display: flexbox;
-    background-color: rgb(103, 114, 117);
+    background-color: var(--headerColor);
     border-radius: 10px;
 }
 
@@ -22,7 +28,7 @@ body {
 .main-menu-navbar>li {
     display: flex;
     padding: 5%;
-    text-decoration-color: azure;
+    text-decoration-color: var(--textColor);
 }
 
 .main-menu-navbar {
@@ -35,4 +41,40 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.profileImage {
+    width: 250px;
+    /* margin-top: 5em; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 100%;
+    border-width: 15px;
+    border-color: rgb(14, 13, 13);
+}
+
+.skillsIcons {
+    margin-top: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+    .mainRow {
+        display: flex;
+        margin-top: 5em;
+    }
+    .col {
+        display: inline;
+        min-width: 50%;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainRow {
+        margin-top: 5em;
+    }
+    .col {
+        position: relative;
+    }
 }

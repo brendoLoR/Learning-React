@@ -8,20 +8,15 @@ export default class Page extends Component {
         super(props)
         this.state = { color: props.color }
     }
+
     render() {
         return (
-            <div className="body-content" style={{backgroundColor:this.state.color}}>
+            <div className="body-content">
                 <Header />
                 <Body />
                 <Footer />
             </div>
         )
     }
-    // Clicked () {
-    //     return (
-    //         <div>
-    //             <p>Clicked: {this.state.clicked}</p>
-    //         </div>
-    //     )
-    // }
+
 }
